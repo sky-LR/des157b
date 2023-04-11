@@ -3,49 +3,74 @@
 }
 
 body {
+    padding-inline: 20px;
     background-color: darkgrey;
     font-family: "lores-21-serif", sans-serif;
     color: black;
-    transition: all 2s;
+    transition: all 0.5s;
 }
 
-body.switch {
+body.switch{
+    font-family: Helvetica, sans-serif;
     background-color: rgb(235, 235, 235);
-    color: #333;
+    color: #2e3535;
 }
 
 #container {
     position: relative;
     width: 100%;
-    max-width: 1366px;
+    max-width: 1300px;
     /* make sure the columns don't get too small and text stays readable */
     min-width: 900px;
-    margin: 1em auto;
+    margin: 20px auto;
     padding-top: 2em;
 }
 
 header {
     margin: 0 auto 2em auto;
+    padding: 20px;
     border-style: groove;
     border-color: lightgrey;
     border-width: 4px ;
 }
 
+header.switch {
+    border: solid lightgray 1px ;
+    border-radius: 5px;
+}
+
+#smiley {
+    position: absolute;
+    image-rendering: pixelated;
+    transform: scale(8);
+}
+
+#web3Smile{
+    position: absolute;
+    visibility: hidden;
+    height: 150%;
+    z-index: 1;
+}
+
+#web3Smile.switch{
+    visibility: visible;
+}
+
 #banner {
     position: relative;
     display: flex;
-    width: 1100px;
+    width: 100%;
     height: 250px;
     margin: auto;
     background: linear-gradient(to right, rgb(0, 0, 255), rgb(97, 97, 255));
     color: #333;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: grid;
 	place-items: center;
 }
 
 #banner.switch {
-    background-color: #333;
+    background: rgb(235, 235, 235);
     color: rgb(235, 235, 235);
     transition: all 2s;
 }
@@ -65,6 +90,35 @@ main section {
     padding: 1em;
 }
 
+h1, h2{
+    letter-spacing: -1px;
+}
+
+h1{
+    font-size: 48pt;
+    line-height: 48pt;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+h2{
+    margin-bottom: 100px;
+    margin-top: 10px;
+    z-index: 9;
+}
+
+h3{
+    font-size: 18pt;
+}
+
+h3.switch {
+    letter-spacing: -1px;
+    /* background-image: linear-gradient(60deg, #0062ff, #7700ff,#ff00f2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; */
+}
+
 a {
     text-decoration: none;
 }
@@ -77,7 +131,6 @@ ul {
 }
 
 section li {
-    /* padding-left: 1.2em; */
     width: 100%;
     margin-block: 5px;
 }
@@ -88,7 +141,6 @@ section a {
     display: inline-block;
     padding-block: 5px;
     padding-inline: 10px;
-    font-family: "lores-12", sans-serif;
     font-size: 12pt;
     text-decoration: none;
     color:black;
@@ -100,24 +152,109 @@ section a {
 
 
 section a:hover {
-    background-color: grey;
+    background-color: rgb(200, 200, 200);
     color: #333;
+}
+
+section.switch {
+    border: solid lightgray 1px ;
+    border-radius: 5px;
+    color: #2e3535;
 }
 
 section.switch a {
-    color: #333;
+    font-size: 12pt;
+    color: #2e3535;
+    background-color: rgb(235, 235, 235);
+    border: solid lightgray 1px ;
+    border-radius: 5px;
+    transition: transform 0.05s ease-out, box-shadow 0.1s ease-in-out;
 }
 
-section.switch a:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235);
+section.switch:nth-child(1) a:hover {
+    /* background: linear-gradient(to bottom, rgb(235, 235, 235), rgb(244, 212, 255), rgb(169, 173, 255)), radial-gradient(rgba(235, 235, 235,0), rgb(255, 0, 0)); */
+    /* background: linear-gradient(to bottom, rgb(235, 235, 235), rgb(237, 232, 238), rgb(228, 229, 240)); */
+    box-shadow: 0px 5px 10px rgb(244, 212, 255), 0px 2px 7px #b9bcff;
+    border-color: rgb(185, 188, 255);
+    transform: scale(1.01);
 }
 
-button {
+section.switch:nth-child(2) a:hover {
+    box-shadow: 0px 5px 10px rgb(172, 238, 198), 0px 2px 7px rgb(121, 228, 202);
+    border-color: rgb(91, 223, 190);
+    transform: scale(1.01);
+}
+
+section.switch:nth-child(3) a:hover {
+    box-shadow: 0px 5px 10px rgb(255, 211, 185), 0px 2px 7px rgb(248, 132, 150);
+    border-color: rgb(247, 150, 164);
+    transform: scale(1.01);
+}
+
+section.switch:nth-child(4) a:hover {
+    box-shadow: 0px 5px 10px rgb(198, 231, 255), 0px 2px 7px rgb(141, 148, 249);
+    border-color: rgb(163, 170, 248);
+    transform: scale(1.01);
+}
+
+#toggle{
     position: absolute;
     top: 20px;
     right: 20px;
-    padding-block: 5px;
+    width: 300px;
+    height: 50px; 
+    background-color: black;
+}
+
+#toggle p{
+    color: white;
+    position: absolute;
+    top:0%;
+    left: 50%;
+}
+
+#toggle.switch{
+    border-radius: 40px;
+    background-color: #2e3535;
+    box-sizing: content-box;
+    border: solid lightgray 1px ;
+    /* background: linear-gradient(to right, rgb(160, 213, 250), rgb(141, 148, 249)); */
+}
+
+#slider{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    height: 40px;
+    background-color: darkgrey;
+    border-color: lightgrey;
+    border-width: 4px;
+    border-style: outset;
+    transition: transform 0.3s ease-in-out;
+}
+
+#slider.switch{
+    background-color: rgb(235, 235, 235);
+    background: linear-gradient(to bottom, rgb(235, 235, 235), rgb(237, 232, 238), rgb(228, 229, 240));
+    transform: translateX(190px);
+    box-sizing: border-box;
+    border: solid lightgray 1px ;
+    border-radius: 20px;
+}
+
+
+#slider p{
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-132%);
+}
+
+button {
+    display: none;
+    /* padding-block: 5px;
     padding-inline: 10px;
     font-family: "lores-12", sans-serif;
     font-size: 12pt;
@@ -126,7 +263,7 @@ button {
     background-color: darkgrey;
     border-width: 3px;
     border-style: outset;
-    border-color: lightgrey;
+    border-color: lightgrey; */
 }
 
 button:hover {
