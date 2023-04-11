@@ -25,8 +25,7 @@
             toggle.className = 'switch';
             smile.className = 'switch';
             
-            slider.innerHTML = "<p>2023</p>";
-            p.className = 'switch';
+            slider.innerHTML = "2023";
 
             for (const section of sections) {
                 section.className = 'switch';
@@ -42,10 +41,9 @@
             header.removeAttribute('class');
             slider.removeAttribute('class');
             toggle.removeAttribute('class');
-            p.removeAttribute('class');
             smile.removeAttribute('class');
 
-            slider.innerHTML = "<p>2000</p>";
+            slider.innerHTML = "2000";
             for (const section of sections) {
                 section.removeAttribute('class');
             }

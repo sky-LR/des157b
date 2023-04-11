@@ -232,24 +232,19 @@ section.switch:nth-child(4) a:hover {
     border-width: 4px;
     border-style: outset;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #slider.switch{
     background-color: rgb(235, 235, 235);
     background: linear-gradient(to bottom, rgb(235, 235, 235), rgb(237, 232, 238), rgb(228, 229, 240));
+    color: #2e3535;
     transform: translateX(190px);
     box-sizing: border-box;
     border: solid lightgray 1px ;
     border-radius: 20px;
-}
-
-
-#slider p{
-    color: black;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-132%);
 }
 
 button {
