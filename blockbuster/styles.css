@@ -1,0 +1,50 @@
+body{
+    color: black;
+}
+
+video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100vh;
+    /* filter: blur(10px) saturate(1000%) contrast(900%) grayscale(40%); */
+}
+
+section{
+    position: absolute;
+    z-index: 1;
+}
+
+p{
+    color: white;
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 36pt;
+    max-width: 75vw;
+}
+
+.fa-compact-disc{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(4);
+    z-index: 1;
+    color: rgb(255, 121, 121);
+    animation: spin 1s ease-in-out infinite;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showing {
+    opacity: 1;
+}
+
+@keyframes spin{
+    0%{transform:translate(-50%,-50%) scale(4) rotate(0deg)}
+    100%{transform: translate(-50%,-50%) scale(4) rotate(360deg)}
+}
