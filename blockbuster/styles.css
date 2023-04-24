@@ -1,5 +1,15 @@
+/* Mono45 Headline Light
+font-family: "mono45-headline", monospace;
+font-weight: 300;
+font-style: normal;
+Mono45 Headline Bold
+font-family: "mono45-headline", monospace;
+font-weight: 700;
+font-style: normal; */
+
 body{
-    color: black;
+    margin: 0;
+    background-color: black;
 }
 
 video{
@@ -10,7 +20,7 @@ video{
     object-fit: cover;
     min-width: 100%;
     min-height: 100vh;
-    /* filter: blur(10px) saturate(1000%) contrast(900%) grayscale(40%); */
+    filter: grayscale(20%) brightness(0.6);
 }
 
 section{
@@ -19,11 +29,34 @@ section{
 }
 
 p{
+    margin: 0;
+    padding: 20px;
     color: white;
-    background-color: black;
-    font-family: Helvetica, sans-serif;
+    font-family: "mono45-headline", monospace;
+    font-weight: 300;
+    font-style: normal;
     font-size: 36pt;
     max-width: 75vw;
+}
+
+p b{
+
+    font-weight: 500;
+
+}
+
+
+#instructions{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    font-family: "mono45-headline", monospace;
+    font-weight: 300;
+    font-size: 18pt;
 }
 
 .fa-compact-disc{
