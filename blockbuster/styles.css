@@ -45,6 +45,13 @@ p b{
 
 }
 
+audio{
+    position: absolute;
+    top: 5px;
+    right: 50px;
+
+}
+
 
 #instructions{
     position: fixed;
