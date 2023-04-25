@@ -23,7 +23,7 @@ video{
     filter: grayscale(20%) brightness(0.6);
 }
 
-section{
+div{
     position: absolute;
     z-index: 1;
 }
