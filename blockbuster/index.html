@@ -8,7 +8,7 @@
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
     <title>Blockbuster Video</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <video poster="images/vinyl1poster.png" loop muted autoplay playsinline>
@@ -18,17 +18,19 @@
 
     <i class="fas fa-compact-disc"></i>
 
-    <section>
+    <div>
         <p id="line1" class="hidden"><b>Change, like the wind;</b> Like the water, like skin</p>
         <p id="line2" class="hidden"><b>Change, like the sky;</b> Like the leaves, like a butterfly</p>
         <p id="line3" class="hidden"><b>Would you live forever, never die;</b> While everything around passes?</p>
         <p id="line4" class="hidden"><b>Would you smile forever, never cry;</b> While everything you know passes?</p>
-    </section>
+    </div>
 
     
         <span id="instructions">
             click anywhere to change records
-            <audio src="sound/des157b-loop.mp3" type="audio/mp3" controls loop autoplay></audio>
+            <audio controls loop autoplay>
+                <source src="sound/des157b-loop.mp3" type="audio/mp3">
+            </audio>
         </span>
 
 </body>
