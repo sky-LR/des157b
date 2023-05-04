@@ -30,15 +30,13 @@ table{
 }
 
 tr{
-    height: 100px;
     margin: 10px;
-    width: 200px;
     overflow: hidden;
-    border-style: none none none solid;
 }
 
 th{
     width: 200px;
+    height: 50px;
     background-color: #ed908a;
     border: solid 1px black;
     padding: 20px;
@@ -47,11 +45,25 @@ th{
 }
 
 td{
-    width: 200px;
+    width: 100px;
+    height: 50px;
     background-color: #d6b729;
     border: solid 1px black;
     padding: 20px;
     border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+td *{
+    display: none;
+}
+
+td:hover{
+    width: 300px;
+    height: 200px;
+}
+td:hover *{
+    display: block;
 }
 
 h3{
