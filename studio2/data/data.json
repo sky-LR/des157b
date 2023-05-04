@@ -1,0 +1,76 @@
+{
+    "day0":{
+       "name":"Sunday"
+    },
+    "day1":{
+       "name":"Monday",
+       "meal1":{
+          "name":"Top Sirloin Steak",
+          "description":"A marinated, pan seared, butter basted masterpiece topped with garlic and rosemary butter."
+       }
+    },
+    "day2":{
+       "name":"Tuesday"
+    },
+    "day3":{
+       "name":"Wednesday",
+       "meal1":{
+          "name":"Lemon Rosemary Chicken",
+          "description":"A summer classic. Had to pick about 6 sprigs of rosemary for the whole thing."
+       },
+       "meal2":{
+          "name":"Garlic Bread",
+          "description":"A staple made even better with fresh rosemary. My friend Alessandra made it to go with some spaghetti."
+       }
+    },
+    "day4":{
+       "name":"Thursday"
+    },
+    "day5":{
+       "name":"Friday",
+       "meal1":{
+          "name":"Garlic Bread",
+          "description":"Another round of one of the most delicious foods known to humanity."
+       }
+    },
+    "day6":{
+       "name":"Saturday"
+    },
+    "day7":{
+       "name":"Sunday"
+    },
+    "day8":{
+       "name":"Monday",
+       "meal1":{
+          "name":"Top Sirloin Steak",
+          "description":"Slightly worse than the first one but still really good. I found out the top sirloin is my favorite cut of steak."
+       },
+       "meal2":{
+          "name":"Cuban-Style Black Beans",
+          "description":"It was a 5 hour ORDEAL to make these from dry beans. Just a little sprinkle of rosemary in it for funsies."
+       },
+       "meal3":{
+          "name":"Garlic Bread",
+          "description":"Do I even need to say anything at this point?"
+       }
+    },
+    "day9":{
+       "name":"Tuesday"
+    },
+    "day10":{
+       "name":"Wednesday"
+    },
+    "day11":{
+       "name":"Thursday"
+    },
+    "day12":{
+       "name":"Friday",
+       "meal1":{
+          "name":"Gazpacho",
+          "description":"Absolute cureveball am I right? I've never had or made gazpacho before. It was a long group effort for a kinda meh meal. Just put a little rosemary in there for fun."
+       }
+    },
+    "day13":{
+       "name":"Saturday"
+    }
+ }

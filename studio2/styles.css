@@ -1,0 +1,109 @@
+/* Livory Regular
+font-family: "livory", serif;
+font-weight: 400;
+font-style: normal;
+Livory Regular Italic
+font-family: "livory", serif;
+font-weight: 400;
+font-style: italic;
+Livory Bold
+font-family: "livory", serif;
+font-weight: 700;
+font-style: normal;
+Livory Bold Italic
+font-family: "livory", serif;
+font-weight: 700;
+font-style: italic; */
+
+body{
+    margin: 0;
+    min-width: 900px;
+    background-color: #e7dbbe;
+}
+
+table{
+    max-width: 900px;
+    margin: auto;
+    margin-top: 300px;
+    font-family: "livory", serif;
+    border-collapse: separate;
+}
+
+tr{
+    height: 100px;
+    margin: 10px;
+    width: 200px;
+    overflow: hidden;
+    border-style: none none none solid;
+}
+
+th{
+    width: 200px;
+    background-color: #ed908a;
+    border: solid 1px black;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18pt;
+}
+
+td{
+    width: 200px;
+    background-color: #d6b729;
+    border: solid 1px black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h3{
+    font-size: 18pt;
+}
+
+p{
+    line-height: 22px;
+}
+
+#rainbow{
+    position: fixed;
+    top: 0px; 
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 300px;
+    width: 510px;
+    background-image: url("images/rosemaryRainbow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -2;
+}
+
+#title{
+    position: fixed;
+    top: 60px; 
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 150px;
+    width: 510px;
+    background-image: url("images/rosemaryHeader.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
+}
+
+#deco1{
+    left: -50px;
+}
+
+#deco2{
+    right: -50px;
+    transform: scale(-1,1);
+}
+
+.decoration{
+    position: fixed;
+    bottom: -50px; 
+    height: 600px;
+    width: 370px;
+    background-image: url("images/rosemaryFlowers.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -2;
+}
