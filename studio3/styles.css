@@ -80,6 +80,8 @@ button{
 }
 
 button:hover{
+    cursor: pointer;
+    background-color: #e6e2ff;
 }
 
 input[type="checkbox"]{
@@ -96,6 +98,11 @@ input[type="checkbox"]{
 input[type="checkbox"]:hover{
     cursor: pointer;
     background-color: hsl(60, 1%, 90%);
+}
+
+footer{
+    position: absolute;
+    bottom: 25px;
 }
 
 .row0 input[type="checkbox"]:checked{
@@ -125,17 +132,10 @@ input[type="checkbox"]:hover{
     width: 200px;
 }
 
-
 input[type="range"].volSlider{
     position: relative;
     right: -744px;
-    top: -100px;
+    /* top: -100px; */
     width: 200px;
     display: flex;
-}
-
-input[type="range"].volSlider :nth-child(0){
-    position: absolute;
-    top: 300px;
-    right: 90px;
 }
