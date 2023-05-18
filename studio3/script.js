@@ -64,7 +64,7 @@ console.log('reading JS');
         for(let i = 0; i<sounds.length; i++){
             const newRow = document.createElement("div");
             newRow.className = `row${i}`;
-            sliders[i] = createSlider(0,1,0.7,0.01);
+            sliders[i] = createSlider(0,1,0.7,0.01); 
             sliders[i].class(`volSlider`);
             document.querySelector('#sequencer').appendChild(newRow);
 
