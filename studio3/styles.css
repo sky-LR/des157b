@@ -86,7 +86,7 @@ button:hover{
 
 input[type="checkbox"]{
     appearance: none;
-    background-color: none;
+    background-color: white;
     margin-inline: -0.5px;
     margin-block: 0;
     font: inherit;
