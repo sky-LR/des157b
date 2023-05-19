@@ -59,3 +59,7 @@ p{
     line-height: 24pt;
     max-width: 600px;
 }
+
+section{
+    margin-block: 100px;
+}
