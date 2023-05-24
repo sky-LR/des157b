@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            color: #333;
+            line-height: 1.4em;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .times {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .verdana {
+            font-family: Verdana, Geneva, Tahoma, sans-serif ;
+        }
+        .courier {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change this H1</h1>
+
+    <p>This is a simple function that I created for this challenge. It changes the font of the H1 element by assigning it a class name that corresponds with a few CSS classes I set to have diifferent fonts.</p>
+
+    <script>
+        const changeFont = fontName => document.querySelector('h1').className = fontName;
+            changeFont("times");
+    </script>
+
+    <h2>Named Function</h2>
+
+    <code>
+        <pre>
+            function changeFont(fontName){
+                document.querySelector('h1').className = fontName;
+            }
+            changeFont("courier");
+        </pre>
+    </code>
+
+    <h2>Function Expression</h2>
+    <code>
+        <pre>
+            const changeFont = function(fontName){
+                document.querySelector('h1').className = fontName;
+            }
+            changeFont("verdana");
+        </pre>
+    </code>
+
+    <h2>Arrow Function</h2>
+    <code>
+        <pre>
+            const changeFont = fontName => document.querySelector('h1').className = fontName;
+            changeFont("times");
+        </pre>
+    </code>
+
+    <footer> Sky LaRoche </footer>
+    
+</body>
+</html>
