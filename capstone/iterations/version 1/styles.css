@@ -1,0 +1,199 @@
+/* Forma DJR Display Bold
+font-family: "forma-djr-display", sans-serif;
+font-weight: 700;
+font-style: normal; */
+
+/* Forma DJR Text Light
+font-family: "forma-djr-text", sans-serif;
+font-weight: 300;
+font-style: normal; */
+
+/* Forma DJR Text Regular
+font-family: "forma-djr-text", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+body{
+    background-color: #272529;
+    color: #C8BFFF;
+}
+
+h2{
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 36pt;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 64pt;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+p{
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 300;
+    font-size: 14pt;
+    margin-inline: 30px;
+}
+
+button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 290px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #362D6D;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border: none;
+    border-radius: 9px;
+}
+
+main{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#mobileAlert{
+    width: 100%;
+    height: 100%;
+    background-color: #272529;
+    z-index: 100;
+}
+
+#mobileAlert div{
+    position: fixed;
+    left: 30px;
+    right: 30px;
+    top: 200px;
+    background-color: #312E35;
+    border-radius: 9px;
+}
+
+#headphoneAlert {
+    position: fixed;
+    left: 30px;
+    right: 30px;
+    top: 200px;
+    background-color: #312E35;
+    border-radius: 9px;
+}
+
+#mobileAlert {
+    position: fixed;
+    visibility: hidden;
+}
+
+#headphoneAlert span{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#intro span{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#intro{
+    position: fixed;
+    width: 100%;
+}
+
+#seal{
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background: url(images/seal-south.png);
+    background-position: center 300px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 60px #362D6D);
+}
+
+#jumpTo{
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    width: 290px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #312E35;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border: none;
+    border-radius: 9px;
+    transition: height 0.15s ease-out;
+}
+
+#volumeCtrl{
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #362D6D;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border: none;
+    border-radius: 9px;
+    transition: height 0.15s ease-out;
+}
+
+#volSlider{
+    position: absolute;
+    top: 120px;
+    left: -65px;
+    width: 200px;
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+#volumeCtrl span{
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translate(-50%,0);
+    transform-origin: center;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.showing{
+    visibility: visible;
+}
+  
+
+@media (min-width: 600px) {
+    #mobileAlert {
+        visibility: visible;
+    }
+  }

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.typekit.net/ilq3jrw.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>CP V1</title>
+</head>
+<body>
+    <div id="mobileAlert">
+        <div>
+            <h2>Please view this project on a mobile device</h2>
+            <p>This project has been sized and optimized for mobile viewing</p>
+            <!-- add a qr code for the website so people can scan it easily -->
+        </div>
+    </div>
+
+    <div id="headphoneAlert" class="showing">
+        <h2>Wait!</h2>
+        <span class="material-symbols-outlined">
+            headphones
+        </span>
+        <p>This project is best experienced in a quiet area with headphones</p>
+        <button type="button" id="continueBtn">Continue to project</button>
+    </div>
+
+    <div id="intro" class="hidden">
+        <h2>Drag to</h2>
+        <h1>explore</h1>
+        <span class="material-symbols-outlined">
+            swipe
+        </span> 
+    </div>
+
+    <main class="hidden">
+        <div id="seal" class="draggable"></div>
+        <div id="jumpTo">Jump to...</div>
+        <div id="volumeCtrl">
+            <input type="range" id="volSlider" class="hidden">
+            <span class="material-symbols-outlined">
+            volume_up
+            </span>
+        </div>
+    </main>
+
+</body>
+</html>
