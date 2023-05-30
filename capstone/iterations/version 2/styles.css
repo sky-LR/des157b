@@ -16,7 +16,10 @@ font-style: normal; */
 body{
     background-color: #272529;
     color: #C8BFFF;
+    width: 100vw;
+    height: 100vh;
 }
+
 
 h2{
     font-family: "forma-djr-display", sans-serif;
@@ -24,7 +27,7 @@ h2{
     text-align: center;
     width: 100%;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 h1{
@@ -64,6 +67,7 @@ main{
     top: 0;
     width: 100%;
     height: 100%;
+    touch-action: none;
 }
 
 #mobileAlert{
@@ -102,29 +106,66 @@ main{
     transform: translate(-50%,0);
 }
 
+#intro{
+    position: fixed;
+    width: 100%;
+}
+
 #intro span{
     position: relative;
     left: 50%;
     transform: translate(-50%,0);
 }
 
-#intro{
+#shadow{
     position: fixed;
-    width: 100%;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0 0 50px #272529;
+    z-index: 1;
+}
+
+#sealContainer{
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    bottom: 30vh;
 }
 
 #seal{
     z-index: -2;
     position: relative;
-    left: 0;
-    top: 0;
-    width: 5000px;
-    height: 5000px;
-    background: url(images/seal-south.png);
-    background-size: 5000px;
+    left: calc(-1500px + 50vw);
+    /* top: 400px; */
+    width: 3000px;
+    height: 3000px;
+    background: url(images/sealHD.png);
+    background-position: center;
+    background-size: 3000px;
     image-rendering: pixelated;
     background-repeat: no-repeat;
     filter: drop-shadow(0px 0px 60px #362D6D);
+    /* transition: transform 0.01s ease-in-out; */
+}
+
+#water{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+#bird{
+    position: absolute;
+    left: 60%;
+    top: 200px;
+    width: 20px;
+    height: 20px;
+    background-color: green;
 }
 
 #jumpTo{
@@ -193,7 +234,31 @@ main{
 .showing{
     visibility: visible;
 }
+
+.draggable {
+    touch-action: none;
+    user-select: none;
+}
+
+.slideUp{
+    animation: slideup 0.5s ease-out forwards;
+}
   
+@keyframes slideup{
+    0%{
+        transform: translateY(0);
+        opacity: 100%;
+        visibility: visible;
+    }
+    90%{
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(-50%);
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
 
 @media (min-width: 600px) {
     #mobileAlert {
