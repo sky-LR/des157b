@@ -63,11 +63,11 @@
 
 //makes the seal draggable using interact library
     interact('.draggable').draggable({
-         modifiers: [
-            interact.modifiers.restrictRect({
-                restriction: 'parent'
-              })
-           ],
+        //  modifiers: [
+        //     interact.modifiers.restrictRect({
+        //         restriction: 'parent'
+        //       })
+        //    ],
 
         listeners: {
             start (event) {
