@@ -23,24 +23,24 @@
     let divXDist;
     let divYDist;
 
-//preloads all sounds
-    function preload(){
-        sounds = [
-            loadSound("sounds/water.mp3"), 
-            loadSound("sounds/birds2.mp3"),
-            loadSound("sounds/frogs.mp3"),
-            loadSound("sounds/bike1.mp3"),
-            loadSound("sounds/duck.mp3"),
-            loadSound("sounds/middle.mp3"),
-            loadSound("sounds/wagon.mp3"),
-            loadSound("sounds/children.mp3"),
-            loadSound("sounds/bike2.mp3"),
-            loadSound("sounds/train.mp3"),
-            loadSound("sounds/crowd.mp3"),
-            loadSound("sounds/truck.mp3"),
-            loadSound("sounds/bats.mp3")
-        ];
-    };
+// //preloads all sounds
+//     function preload(){
+//         sounds = [
+//             loadSound("sounds/water.mp3"), 
+//             loadSound("sounds/birds2.mp3"),
+//             loadSound("sounds/frogs.mp3"),
+//             loadSound("sounds/bike1.mp3"),
+//             loadSound("sounds/duck.mp3"),
+//             loadSound("sounds/middle.mp3"),
+//             loadSound("sounds/wagon.mp3"),
+//             loadSound("sounds/children.mp3"),
+//             loadSound("sounds/bike2.mp3"),
+//             loadSound("sounds/train.mp3"),
+//             loadSound("sounds/crowd.mp3"),
+//             loadSound("sounds/truck.mp3"),
+//             loadSound("sounds/bats.mp3")
+//         ];
+//     };
 
 //gets around chrome's autoplay rules
     function setup() {
@@ -55,6 +55,7 @@
 
 //gets rid of heaphone alert
     document.querySelector("#continueBtn").addEventListener("click", function(e){
+    userStartAudio();
     e.preventDefault();
     document.querySelector("#headphoneAlert").className = "disappear";
     document.querySelector("#intro").className = "slideDown";
@@ -72,7 +73,7 @@
         listeners: {
             start (event) {
                 console.log(event.type, event.target)
-                intro.className = 'slideUp';
+                // intro.className = 'slideUp';
                 if(!volToggle){
                     volumeCtrl.style.height = "70px";
                     volSlider.className = "hidden";
