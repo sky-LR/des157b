@@ -83,7 +83,6 @@
                 sealPosition.x += event.dx
                 sealPosition.y += event.dy
                 event.target.style.transform = `translate(${sealPosition.x}px, ${sealPosition.y}px)`
-                setDivVolumes();
             }
         }
     });
