@@ -79,9 +79,15 @@
                 // }
             },
             move (event) {
-                sealPosition.x += event.dx
-                sealPosition.y += event.dy
-                event.target.style.transform = `translate(${sealPosition.x}px, ${sealPosition.y}px)`
+                var target = event.target
+
+                var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+                var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+                target.style.transform = `translate(${x}px, ${y}px)`
+
+                target.setAttribute('data-x', x)
+                target.setAttribute('data-y', y)
             }
         }
     });
