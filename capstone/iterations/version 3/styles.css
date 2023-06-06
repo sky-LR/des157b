@@ -65,6 +65,11 @@ button{
     border-radius: 9px;
 }
 
+button:hover{
+    cursor: pointer;
+    background-color: #3a2e89;
+}
+
 main{
     position: fixed;
     left: 0;
@@ -83,9 +88,9 @@ main{
 
 #mobileAlert div{
     position: fixed;
-    left: 30px;
-    right: 30px;
     top: 200px;
+    margin-inline: 30px;
+    max-width: 900px;
     background-color: #312E35;
     border-radius: 9px;
 }
@@ -98,6 +103,7 @@ main{
     background-color: #312E35;
     border-radius: 9px;
     padding-inline: 20px;
+    z-index: 1;
 }
 
 #headphoneAlert span{
@@ -168,7 +174,7 @@ main{
     /* transform: scale(0.1); */
 }
 
-#jumpTo{
+/* #jumpTo{
     position: fixed;
     bottom: 30px;
     left: 10px;
@@ -184,7 +190,7 @@ main{
     border: none;
     border-radius: 9px;
     transition: height 0.15s ease-out;
-}
+} */
 
 #volumeCtrl{
     position: fixed;
@@ -204,6 +210,11 @@ main{
     transition: height 0.15s ease-out;
 }
 
+#volumeCtrl:hover{
+    cursor: pointer;
+    background-color: #3a2e89;
+}
+
 #info{
     position: fixed;
     bottom: 30px;
@@ -220,6 +231,11 @@ main{
     border-radius: 9px;
 }
 
+#info:hover{
+    cursor: pointer;
+    background-color: #3a2e89;
+}
+
 #info span{
     position: absolute;
     bottom: 23px;
@@ -230,11 +246,13 @@ main{
 
 #volSlider{
     position: absolute;
+    opacity: 0;
     top: 120px;
     left: -65px;
     width: 200px;
     transform-origin: center;
     transform: rotate(-90deg);
+
 }
 
 #volumeCtrl span{
@@ -245,15 +263,13 @@ main{
     transform-origin: center;
 }
 
-/* SOUND DIVS */
+/* -------------------SOUND DIVS---------------------*/
 #water{
     position: absolute;
     left: 1700px;
     top: 220px;
     width: 30px;
     height: 30px;
-    border: solid #C8BFFF 3px;
-    border-radius: 50%;
 }
 
 #bird{
@@ -262,48 +278,72 @@ main{
     top: 800px;
     width: 30px;
     height: 30px;
-    border: solid #C8BFFF 3px;
-    border-radius: 50%;
 }
 
 #frog{
     position: absolute;
     left: 630px;
     top: 2415px;
-    width: 30px;
-    height: 30px;
-    border: solid #C8BFFF 3px;
-    border-radius: 50%;
 }
 
 #bike{
     position: absolute;
-    left: 1500px;
-    top: 400px;
-    width: 30px;
-    height: 30px;
-    border: solid #C8BFFF 3px;
-    border-radius: 50%;
+    left: 2500px;
+    top: 1200px;
 }
 
 #duck{
     position: absolute;
     left: 2550px;
     top: 1666px;
-    width: 30px;
-    height: 30px;
-    border: solid #C8BFFF 3px;
-    border-radius: 50%;
 }
 
 #middle{
     position: absolute;
     left: 1580px;
     top: 1460px;
-    width: 30px;
-    height: 30px;
-    border: solid #C8BFFF 3px;
-    border-radius: 50%;
+}
+
+#wagon{
+    position: absolute;
+    left: 1550px;
+    top: 1760px;
+}
+
+#children{
+    position: absolute;
+    left: 1650px;
+    top: 2380px;
+}
+
+#bike2{
+    position: absolute;
+    left: 1600px;
+    top: 750px;
+}
+
+#train{
+    position: absolute;
+    left: 1850px;
+    top: 1050px;
+}
+
+#crowd{
+    position: absolute;
+    left: 600px;
+    top: 2010px; 
+}
+
+#truck{
+    position: absolute;
+    left: 2320px;
+    top: 2100px; 
+}
+
+#bat{
+    position: absolute;
+    left: 1900px;
+    top: 2700px; 
 }
 
 .material-symbols-outlined {
@@ -328,14 +368,26 @@ main{
 }
 
 .slideUp{
-    animation: slideup 0.5s ease-out forwards;
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+.slideUpFull{
+    animation: slideUpFull 0.5s ease-out forwards;
 }
 
 .slideDown{
     animation: slideDown 0.5s ease-out forwards;
 }
+
+.appear{
+    animation: appear 0.5s ease-out 0.1s forwards;
+}
+
+.disappear{
+    animation: disappear 0.5s ease-out 0.1s forwards;
+}
   
-@keyframes slideup{
+@keyframes slideUp{
     0%{
         transform: translateY(0);
         opacity: 100%;
@@ -347,6 +399,18 @@ main{
     100%{
         transform: translateY(-50%);
         opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@keyframes slideUpFull{
+    0%{
+        transform: translateY(0);
+        opacity: 100%;
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(-100%);
         visibility: hidden;
     }
 }
@@ -363,9 +427,36 @@ main{
     100%{
         transform: translateY(0%);
         opacity: 0%;
-        visibility: hidden;
         opacity: 100%;
         visibility: visible;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0%;
+        visibility: hidden;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes disappear{
+    0%{
+        opacity: 100%;
+        visibility: visible;
+    }
+    90%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 0%;
+        visibility: hidden;
     }
 }
 

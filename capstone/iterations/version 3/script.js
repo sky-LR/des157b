@@ -63,12 +63,19 @@
 //preloads all sounds
     function preload(){
         sounds = [
-            loadSound("sounds/water.wav"), 
-            loadSound("sounds/birds2.wav"),
+            loadSound("sounds/water.mp3"), 
+            loadSound("sounds/birds2.mp3"),
             loadSound("sounds/frogs.mp3"),
-            loadSound("sounds/bike.mp3"),
-            loadSound("sounds/ducks.m4a"),
-            loadSound("sounds/middle.mp3")
+            loadSound("sounds/bike1.mp3"),
+            loadSound("sounds/duck.mp3"),
+            loadSound("sounds/middle.mp3"),
+            loadSound("sounds/wagon.mp3"),
+            loadSound("sounds/children.mp3"),
+            loadSound("sounds/bike2.mp3"),
+            loadSound("sounds/train.mp3"),
+            loadSound("sounds/crowd.mp3"),
+            loadSound("sounds/truck.mp3"),
+            loadSound("sounds/bats.mp3")
         ];
     };
 
@@ -76,7 +83,7 @@
     function setup() {
         createCanvas(0,0);
         getAudioContext().suspend();
-        // alert('Hello User! Welcome to this interactive, experimental sound map of the Davis centennial seal. Here are the tasks I would like you to complete:\n\n1. Change the volume\n2. Access information about the project AFTER interacting with it\n3. Find the frog\n\nThanks for testing!');
+        outputVolume(parseFloat(volSlider.value));
     }
 
     function mousePressed() { 
@@ -84,11 +91,11 @@
     }
 
 //gets rid of heaphone alert
-document.querySelector("#continueBtn").addEventListener("click", function(e){
+    document.querySelector("#continueBtn").addEventListener("click", function(e){
     e.preventDefault();
-    document.querySelector("#headphoneAlert").className = "hidden";
-    document.querySelector("#intro").className = "showing";
-    document.querySelector("main").className = "showing";
+    document.querySelector("#headphoneAlert").className = "disappear";
+    document.querySelector("#intro").className = "slideDown";
+    document.querySelector("main").className = "appear";
 })
 
 //makes the seal draggable using interact library
@@ -103,6 +110,11 @@ document.querySelector("#continueBtn").addEventListener("click", function(e){
             start (event) {
                 console.log(event.type, event.target)
                 intro.className = 'slideUp';
+                if(!volToggle){
+                    volumeCtrl.style.height = "70px";
+                    volSlider.className = "hidden";
+                    volToggle = true;
+                }
             },
             move (event) {
                 sealPosition.x += event.dx
@@ -151,14 +163,11 @@ document.querySelector("#continueBtn").addEventListener("click", function(e){
         console.log('clicked');
     
         if (volToggle){
+            volSlider.className = "appear";
             volumeCtrl.style.height = "300px";
-            volSlider.className = "showing";
-        } else {
-            volumeCtrl.style.height = "70px";
-            volSlider.className = "hidden";
-        };
+            volToggle = false;
+        }
 
-        volToggle = !volToggle;
     });
 
     // jumpTo.addEventListener("click", function(){
