@@ -25,8 +25,9 @@ h2{
     font-family: "forma-djr-display", sans-serif;
     font-size: 36pt;
     text-align: center;
-    width: 100%;
+    /* width: 100%; */
     margin-top: 50px;
+    margin-inline: 30px;
     margin-bottom: 0px;
 }
 
@@ -51,7 +52,8 @@ button{
     position: relative;
     left: 50%;
     transform: translate(-50%,0);
-    width: 290px;
+    width: 100%;
+    max-width: 290px;
     height: 70px;
     margin-block: 20px;
     background-color: #362D6D;
@@ -95,6 +97,12 @@ main{
     top: 200px;
     background-color: #312E35;
     border-radius: 9px;
+    padding-inline: 20px;
+}
+
+#headphoneAlert span{
+    margin-top: 30px;
+    font-size: 48pt;
 }
 
 #mobileAlert {
@@ -122,6 +130,7 @@ main{
     position: relative;
     left: 50%;
     transform: translate(-50%,0);
+    font-size: 48pt;
 }
 
 #shadow{
@@ -148,7 +157,7 @@ main{
     /* top: 400px; */
     width: 3000px;
     height: 3000px;
-    background: url(images/sealHD.png);
+    background: url(images/sealHD.avif);
     background-position: center;
     background-size: 3000px;
     image-rendering: pixelated;

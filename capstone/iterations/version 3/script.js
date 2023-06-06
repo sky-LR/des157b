@@ -76,7 +76,7 @@
     function setup() {
         createCanvas(0,0);
         getAudioContext().suspend();
-        alert('Hello User! Welcome to this interactive, experimental sound map of the Davis centennial seal. Here are the tasks I would like you to complete:\n\n1. Change the volume\n2. Access information about the project AFTER interacting with it\n3. Find the frog\n\nThanks for testing!');
+        // alert('Hello User! Welcome to this interactive, experimental sound map of the Davis centennial seal. Here are the tasks I would like you to complete:\n\n1. Change the volume\n2. Access information about the project AFTER interacting with it\n3. Find the frog\n\nThanks for testing!');
     }
 
     function mousePressed() { 
