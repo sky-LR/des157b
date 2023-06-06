@@ -3,8 +3,6 @@
 //all global vars
     const volumeCtrl = document.querySelector("#volumeCtrl");
     const volSlider = document.querySelector("#volSlider");
-    const jumpTo = document.querySelector('#jumpTo');
-    const jumpOptions = document.querySelector('#jumpOptions');
     const info = document.querySelector('#info');
     const intro = document.querySelector('#intro');
     const seal = document.querySelector("#seal");
@@ -12,7 +10,6 @@
     const sealPosition = { x: 0, y: 0 }
 
     let volToggle = true;
-    let jumpToggle = true;
     let bgPos = [-2500, 400];
     let prevBgPos = [-2500, 400];
     let clientPos = [0,0];
@@ -72,7 +69,7 @@
 
         listeners: {
             start (event) {
-                console.log(event.type, event.target)
+                //console.log(event.type, event.target)
                 // intro.className = 'slideUp';
                 if(!volToggle){
                     volumeCtrl.style.height = "70px";
