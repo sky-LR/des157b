@@ -161,19 +161,19 @@ document.querySelector("#continueBtn").addEventListener("click", function(e){
         volToggle = !volToggle;
     });
 
-    jumpTo.addEventListener("click", function(){
-        console.log('clicked');
+    // jumpTo.addEventListener("click", function(){
+    //     console.log('clicked');
     
-        if (jumpToggle){
-            jumpTo.style.height = "300px";
-            jumpOptions.className = "showing";
-        } else {
-            jumpTo.style.height = "70px";
-            jumpOptions.className = "hidden";
-        };
+    //     if (jumpToggle){
+    //         jumpTo.style.height = "300px";
+    //         jumpOptions.className = "showing";
+    //     } else {
+    //         jumpTo.style.height = "70px";
+    //         jumpOptions.className = "hidden";
+    //     };
 
-        jumpToggle = !jumpToggle;
-    });
+    //     jumpToggle = !jumpToggle;
+    // });
 
     info.addEventListener("click", function(){
         console.log('clicked');

@@ -160,6 +160,7 @@ main{
     background: url(images/sealHD.avif);
     background-position: center;
     background-size: 3000px;
+    background-attachment: scroll; 
     image-rendering: pixelated;
     background-repeat: no-repeat;
     filter: drop-shadow(0px 0px 60px #362D6D);
