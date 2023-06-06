@@ -89,32 +89,32 @@
     });
 
 //makes the sounds change volume and pan based on their div's distance from the center
-    function setDivVolumes(){
-        for (let i = 0; i < sealDivs.length; i++) {
+    // function setDivVolumes(){
+    //     for (let i = 0; i < sealDivs.length; i++) {
 
-            divOffset = sealDivs[i].getBoundingClientRect();
+    //         divOffset = sealDivs[i].getBoundingClientRect();
 
-            //stores a 0-1 value for how close the div is to the center on each axis
-            divXDist = ((-Math.abs(((window.innerWidth/2) - divOffset.left)/(window.innerWidth/2)))+1);
-            divYDist = ((-Math.abs(((window.innerHeight/2) - divOffset.top)/(window.innerHeight/2)))+1);
+    //         //stores a 0-1 value for how close the div is to the center on each axis
+    //         divXDist = ((-Math.abs(((window.innerWidth/2) - divOffset.left)/(window.innerWidth/2)))+1);
+    //         divYDist = ((-Math.abs(((window.innerHeight/2) - divOffset.top)/(window.innerHeight/2)))+1);
             
 
-            if (divOffset.top < window.innerHeight && divOffset.top > 0 && divOffset.left < window.innerWidth && divOffset.left > 0 ){
-                if (!sounds[i].isPlaying()){
-                    sounds[i].loop();
-                }
-                //the function that
-                divDistance = Math.sqrt(divXDist*divYDist);
+    //         if (divOffset.top < window.innerHeight && divOffset.top > 0 && divOffset.left < window.innerWidth && divOffset.left > 0 ){
+    //             if (!sounds[i].isPlaying()){
+    //                 sounds[i].loop();
+    //             }
+    //             //the function that
+    //             divDistance = Math.sqrt(divXDist*divYDist);
 
-                sounds[i].pan(-(((window.innerWidth/2) - divOffset.left)/(window.innerWidth/2))/3);
-                sounds[i].setVolume(divDistance - 0.1, 0.2, 0);
-            } else {
-                sounds[i].setVolume(0);
-                sounds[i].pause();
-            }
+    //             sounds[i].pan(-(((window.innerWidth/2) - divOffset.left)/(window.innerWidth/2))/3);
+    //             sounds[i].setVolume(divDistance - 0.1, 0.2, 0);
+    //         } else {
+    //             sounds[i].setVolume(0);
+    //             sounds[i].pause();
+    //         }
 
-        };
-    }
+    //     };
+    // }
 
 //sets output volume
     volSlider.addEventListener("change", function() {
