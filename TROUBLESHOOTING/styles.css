@@ -1,3 +1,7 @@
+body{
+    position: fixed;
+}
+
 #box{
     background-color : red;
     width: 100px;
