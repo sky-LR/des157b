@@ -61,6 +61,7 @@
 
 //makes the seal draggable using interact library
     interact('.draggable').draggable({
+        inertia: true,
         //  modifiers: [
         //     interact.modifiers.restrictRect({
         //         restriction: 'parent'
@@ -71,11 +72,11 @@
             start (event) {
                 //console.log(event.type, event.target)
                 // intro.className = 'slideUp';
-                if(!volToggle){
-                    volumeCtrl.style.height = "70px";
-                    volSlider.className = "hidden";
-                    volToggle = true;
-                }
+                // if(!volToggle){
+                //     volumeCtrl.style.height = "70px";
+                //     volSlider.className = "hidden";
+                //     volToggle = true;
+                // }
             },
             move (event) {
                 sealPosition.x += event.dx
