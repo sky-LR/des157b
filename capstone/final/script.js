@@ -100,6 +100,9 @@
 
 //makes the seal draggable using interact library
     interact('.draggable').draggable({
+        
+        inertia: true,
+
          modifiers: [
             interact.modifiers.restrictRect({
                 restriction: 'parent'

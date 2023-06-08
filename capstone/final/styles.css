@@ -164,13 +164,13 @@ main{
     /* top: 400px; */
     width: 3000px;
     height: 3000px;
-    background: url(images/sealHD.avif);
+    background: url(images/sealHD.avif), radial-gradient(#362D6D,#362D6D,#362D6D,#362D6D,#362D6D,#352d6d00,#352d6d00,#352d6d00);
     background-position: center;
     background-size: 3000px;
     background-attachment: scroll; 
     image-rendering: pixelated;
     background-repeat: no-repeat;
-    filter: drop-shadow(0px 0px 60px #362D6D);
+    /* filter: drop-shadow(0px 0px 60px #362D6D); */
     /* transition: transform 0.01s ease-in-out; */
     /* transform: scale(0.1); */
 }
