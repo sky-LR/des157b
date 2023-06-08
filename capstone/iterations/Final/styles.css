@@ -1,0 +1,468 @@
+/* Forma DJR Display Bold
+font-family: "forma-djr-display", sans-serif;
+font-weight: 700;
+font-style: normal; */
+
+/* Forma DJR Text Light
+font-family: "forma-djr-text", sans-serif;
+font-weight: 300;
+font-style: normal; */
+
+/* Forma DJR Text Regular
+font-family: "forma-djr-text", sans-serif;
+font-weight: 400;
+font-style: normal; */
+
+body{
+    background-color: #272529;
+    color: #C8BFFF;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+h2{
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 36pt;
+    text-align: center;
+    /* width: 100%; */
+    margin-top: 50px;
+    margin-inline: 30px;
+    margin-bottom: 0px;
+}
+
+h1{
+    font-family: "forma-djr-display", sans-serif;
+    font-size: 64pt;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+p{
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 300;
+    font-size: 14pt;
+    line-height: 22pt;
+    letter-spacing: 0.5px;
+    margin-inline: 30px;
+}
+
+button{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 100%;
+    max-width: 290px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #362D6D;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border: none;
+    border-radius: 9px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #3a2e89;
+}
+
+main{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+#mobileAlert{
+    width: 100vw;
+    height: 100vh;
+    background-color: #272529;
+    z-index: 100;
+}
+
+#mobileAlert div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    background-color: #312E35;
+    border-radius: 9px;
+}
+
+#headphoneAlert {
+    position: fixed;
+    left: 30px;
+    right: 30px;
+    top: 200px;
+    background-color: #312E35;
+    border-radius: 9px;
+    padding-inline: 20px;
+    z-index: 1;
+}
+
+#headphoneAlert span{
+    margin-top: 30px;
+    font-size: 48pt;
+}
+
+#mobileAlert {
+    position: fixed;
+    visibility: hidden;
+}
+
+#headphoneAlert span{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+#intro{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 80%;
+    /* background-color: #27252982; */
+    background: linear-gradient(#272529, #272529d6, #27252900);
+    pointer-events: none;
+}
+
+#intro span{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 48pt;
+}
+
+#shadow{
+    position: fixed;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    box-shadow: inset 0 0 50px #272529;
+    z-index: 1;
+}
+
+#sealContainer{
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    bottom: 30vh;
+}
+
+#seal{
+    z-index: -2;
+    position: relative;
+    left: calc(-1500px + 50vw);
+    /* top: 400px; */
+    width: 3000px;
+    height: 3000px;
+    background: url(images/sealHD.avif);
+    background-position: center;
+    background-size: 3000px;
+    background-attachment: scroll; 
+    image-rendering: pixelated;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 60px #362D6D);
+    /* transition: transform 0.01s ease-in-out; */
+    /* transform: scale(0.1); */
+}
+
+/* #jumpTo{
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    z-index: 2;
+    width: 210px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #312E35;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border: none;
+    border-radius: 9px;
+    transition: height 0.15s ease-out;
+} */
+
+#volumeCtrl{
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 2;
+    width: 70px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #362D6D;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border: none;
+    border-radius: 9px;
+    transition: height 0.15s ease-out;
+}
+
+#volumeCtrl:hover{
+    cursor: pointer;
+    background-color: #3a2e89;
+}
+
+#info{
+    position: fixed;
+    bottom: 30px;
+    right: 90px;
+    z-index: 2;
+    width: 70px;
+    height: 70px;
+    margin-block: 20px;
+    background-color: #362D6D;
+    color: #C8BFFF;
+    font-family: "forma-djr-text", sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    border-radius: 9px;
+}
+
+#info:hover{
+    cursor: pointer;
+    background-color: #3a2e89;
+}
+
+#info span{
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translate(-50%,0);
+    transform-origin: center;
+}
+
+#volSlider{
+    position: absolute;
+    opacity: 0;
+    top: 120px;
+    left: -65px;
+    width: 200px;
+    transform-origin: center;
+    transform: rotate(-90deg);
+
+}
+
+#volumeCtrl span{
+    position: absolute;
+    bottom: 23px;
+    left: 50%;
+    transform: translate(-50%,0);
+    transform-origin: center;
+}
+
+/* -------------------SOUND DIVS---------------------*/
+#water{
+    position: absolute;
+    left: 1700px;
+    top: 220px;
+    width: 30px;
+    height: 30px;
+}
+
+#bird{
+    position: absolute;
+    left: 2570px;
+    top: 800px;
+    width: 30px;
+    height: 30px;
+}
+
+#frog{
+    position: absolute;
+    left: 630px;
+    top: 2415px;
+}
+
+#bike{
+    position: absolute;
+    left: 2500px;
+    top: 1200px;
+}
+
+#duck{
+    position: absolute;
+    left: 2550px;
+    top: 1666px;
+}
+
+#middle{
+    position: absolute;
+    left: 1580px;
+    top: 1460px;
+}
+
+#wagon{
+    position: absolute;
+    left: 1550px;
+    top: 1760px;
+}
+
+#children{
+    position: absolute;
+    left: 1650px;
+    top: 2380px;
+}
+
+#bike2{
+    position: absolute;
+    left: 1600px;
+    top: 750px;
+}
+
+#train{
+    position: absolute;
+    left: 1850px;
+    top: 1050px;
+}
+
+#crowd{
+    position: absolute;
+    left: 600px;
+    top: 2010px; 
+}
+
+#truck{
+    position: absolute;
+    left: 2320px;
+    top: 2100px; 
+}
+
+#bat{
+    position: absolute;
+    left: 1900px;
+    top: 2700px; 
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+.showing{
+    visibility: visible;
+}
+
+.draggable {
+    touch-action: none;
+    user-select: none;
+}
+
+.slideUp{
+    animation: slideUp 0.5s ease-out forwards;
+}
+
+.slideUpFull{
+    animation: slideUpFull 0.5s ease-out forwards;
+}
+
+.slideDown{
+    animation: slideDown 0.5s ease-out forwards;
+}
+
+.appear{
+    animation: appear 0.5s ease-out 0.1s forwards;
+}
+
+.disappear{
+    animation: disappear 0.5s ease-out 0.1s forwards;
+}
+  
+@keyframes slideUp{
+    0%{
+        transform: translateY(0);
+        opacity: 100%;
+        visibility: visible;
+    }
+    90%{
+        opacity: 0%;
+    }
+    100%{
+        transform: translateY(-50%);
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@keyframes slideUpFull{
+    0%{
+        transform: translateY(0);
+        opacity: 100%;
+        visibility: visible;
+    }
+    100%{
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes slideDown{
+    0%{
+        transform: translateY(-50%);
+        opacity: 0%;
+        visibility: hidden;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        transform: translateY(0%);
+        opacity: 0%;
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0%;
+        visibility: hidden;
+    }
+    90%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+
+@keyframes disappear{
+    0%{
+        opacity: 100%;
+        visibility: visible;
+    }
+    90%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 0%;
+        visibility: hidden;
+    }
+}
+
+@media (min-width: 600px) {
+    #mobileAlert {
+        visibility: visible;
+    }
+  }

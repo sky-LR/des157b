@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://use.typekit.net/ilq3jrw.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+    <script src="libraries/p5.sound.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+    <script src="script.js" defer></script>
+    <title>CP V3</title>
+</head>
+<body>
+    <div id="mobileAlert">
+        <div>
+            <h2>Please view this project on a mobile device</h2>
+            <p>
+                This project has been sized and optimized for mobile viewing.
+                Scanning this QR code with your phone's camera will bring you to mobile site.
+            </p>
+
+            <p>
+                Alternatively, resizing your desktop browser window to below 600px in width will allow you to simulate a mobile experience.
+            </p>
+            <!-- add a qr code for the website so people can scan it easily -->
+        </div>
+    </div>
+
+    <div id="headphoneAlert" class="showing">
+            <h2>Wait!</h2>
+            <span class="material-symbols-outlined">
+                headphones
+            </span>
+            <p>This project is best experienced in a quiet area with headphones.</p>
+            <button type="button" id="continueBtn">Continue to project</button>
+    </div>
+
+    <div id="intro" class="hidden">
+        <h2>Drag to</h2>
+        <h1>explore</h1>
+        <p>
+            This is an interactive sound map of the Davis centennial seal.
+            <br><br>
+            Tap and drag to navigate around the seal and discover the ambient soundscapes of Davis.
+        </p>
+        <span class="material-symbols-outlined">
+            swipe
+        </span> 
+    </div>
+
+    <main class="hidden">
+        <div id="sealContainer">
+            <div id="seal" class="draggable">
+                <div id="water"></div>
+                <div id="bird"></div>
+                <div id="frog"></div>
+                <div id="bike"></div>
+                <div id="duck"></div>
+                <div id="middle"></div>
+                <div id="wagon"></div>
+                <div id="children"></div>
+                <div id="bike2"></div>
+                <div id="train"></div>
+                <div id="crowd"></div>
+                <div id="truck"></div>
+                <div id="bat"></div>
+
+                <!-- list of things to add:
+                - train
+                - wagon
+                - small crowd for farmer's market
+                - busses
+                - children crowd
+                - maybe a little music for the center?? -->
+            </div>
+        </div>
+
+        <div id="shadow"></div>
+
+        <div id="info">
+            <span class="material-symbols-outlined">
+                question_mark
+            </span>
+        </div>
+
+        <!-- <div id="jumpTo">
+            Jump to...
+            <ul id="jumpOptions" class="hidden">
+                <li>This section</li>
+                <li>of the site</li>
+                <li>is under construction</li>
+            </ul>
+        </div> -->
+
+        <div id="volumeCtrl">
+            <input type="range" id="volSlider" class="hidden" min="0" max="1" value="0.8" step="0.01">
+            <span class="material-symbols-outlined">
+            volume_up
+            </span>
+        </div>
+
+    </main>
+
+</body>
+</html>

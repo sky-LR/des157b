@@ -5,8 +5,15 @@ body{
 }
 
 #box{
+    position: relative;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Bachelor%27s_button%2C_Basket_flower%2C_Boutonniere_flower%2C_Cornflower_-_3.jpg/640px-Bachelor%27s_button%2C_Basket_flower%2C_Boutonniere_flower%2C_Cornflower_-_3.jpg);
     background-size: cover;
     width: 100px;
     height: 100px;
+}
+
+#something{
+    width: 20px;
+    height: 20px;
+    background-color: red;
 }
