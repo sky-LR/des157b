@@ -1,5 +1,15 @@
 "use strict";
 
+//makes fullscreen on mobile
+const pageHeight = function() {
+    const doc = document.documentElement;
+    doc.style.setProperty('--page-height', `${window.innerHeight}px`);
+    console.log(`innerHeight: ${window.innerHeight}px`);
+    console.log(`visualViewport: ${visualViewport.height}`);
+}
+
+pageHeight();
+
 //all global vars
     const volumeCtrl = document.querySelector("#volumeCtrl");
     const volSlider = document.querySelector("#volSlider");
