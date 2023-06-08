@@ -37,6 +37,14 @@
 
 "use strict";
 
+//makes fullscreen on mobile
+const pageHeight = function() {
+    const doc = document.documentElement;
+    doc.style.setProperty('--page-height', `${window.innerHeight}px`);
+    console.log(`innerHeight: ${window.innerHeight}px`);
+    console.log(`visualViewport: ${visualViewport.height}`);
+}
+
 //all global vars
     const volumeCtrl = document.querySelector("#volumeCtrl");
     const volSlider = document.querySelector("#volSlider");
@@ -46,6 +54,7 @@
     const intro = document.querySelector('#intro');
     const seal = document.querySelector("#seal");
     const sealDivs = document.querySelectorAll("#seal div");
+    const visualizer = document.querySelector('#visualizer');
     const sealPosition = { x: 0, y: 0 }
 
     let volToggle = true;
@@ -59,6 +68,7 @@
     let divDistance;
     let divXDist;
     let divYDist;
+    let amp;
 
 //preloads all sounds
     function preload(){
@@ -84,9 +94,15 @@
         createCanvas(0,0);
         getAudioContext().suspend();
         outputVolume(parseFloat(volSlider.value));
+        amp = new p5.Amplitude();
+    }
+
+    function draw(){
+        visualizer.style.transform = `scale(${amp.getLevel() * 100})`;
     }
 
     function mousePressed() { 
+        console.log(amp.getLevel());
         userStartAudio();
     }
 
