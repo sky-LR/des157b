@@ -105,6 +105,7 @@ main{
     width: 500px;
     background-color: #312E35;
     border-radius: 9px;
+    padding-inline: 20px;
 }
 
 #headphoneAlert {
