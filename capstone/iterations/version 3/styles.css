@@ -170,7 +170,7 @@ main{
     background-attachment: scroll; 
     image-rendering: pixelated;
     background-repeat: no-repeat;
-    filter: drop-shadow(0px 0px 60px #362D6D);
+    /* filter: drop-shadow(0px 0px 60px #362D6D); */
     /* transition: transform 0.01s ease-in-out; */
     /* transform: scale(0.1); */
 }
