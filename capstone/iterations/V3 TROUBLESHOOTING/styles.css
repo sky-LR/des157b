@@ -166,7 +166,7 @@ main{
     /* top: 400px; */
     width: 3000px;
     height: 3000px;
-    background: url(images/sealHD.avif);
+    background: linear-gradient(red, green, blue, yellow);
     background-position: center;
     background-size: 3000px;
     background-attachment: local; 
