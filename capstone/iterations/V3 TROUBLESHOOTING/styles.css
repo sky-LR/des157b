@@ -162,17 +162,17 @@ main{
 #seal{
     z-index: -2;
     position: relative;
-    left: calc(-1500px + 50vw);
+    /* left: calc(-1500px + 50vw); */
     /* top: 400px; */
     width: 3000px;
     height: 3000px;
     background: linear-gradient(red, green, blue, yellow);
     background-position: center;
-    background-size: 3000px;
+    background-size: cover;
     background-attachment: local; 
     image-rendering: pixelated;
     background-repeat: no-repeat;
-    filter: drop-shadow(0px 0px 60px #362D6D);
+    /* filter: drop-shadow(0px 0px 60px #362D6D); */
     /* transition: transform 0.01s ease-in-out; */
     /* transform: scale(0.1); */
 }
